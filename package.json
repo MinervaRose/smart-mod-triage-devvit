@@ -1,0 +1,22 @@
+{
+  "name": "smart-mod-triage",
+  "version": "0.2.0",
+  "private": true,
+  "description": "A Devvit-ready AI-assisted moderation triage tool for Reddit moderators.",
+  "type": "module",
+  "scripts": {
+    "dev": "devvit playtest",
+    "build": "vite build",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@devvit/web": "latest",
+    "@devvit/start": "latest",
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "typescript": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {}
+}

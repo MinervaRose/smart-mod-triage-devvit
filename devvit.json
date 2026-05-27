@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developers.reddit.com/schema/config-file.v1.json",
+  "name": "smart-mod-triage",
+  "post": {
+    "dir": "dist/client",
+    "entrypoints": {
+      "default": {
+        "inline": true,
+        "entry": "index.html",
+        "height": "tall"
+      }
+    }
+  },
+  "server": {
+    "dir": "dist/server",
+    "entry": "index.cjs"
+  },
+  "menu": {
+    "items": [
+      {
+        "label": "Smart triage",
+        "description": "Estimate severity, confidence, and suggested moderation action.",
+        "forUserType": "moderator",
+        "location": ["post", "comment"],
+        "endpoint": "/internal/menu/smart-triage"
+      }
+    ]
+  },
+  "forms": {
+    "triageForm": "/internal/form/triage-submit"
+  },
+  "permissions": {
+    "reddit": {
+      "enable": true,
+      "scope": "moderator"
+    }
+  }
+}
